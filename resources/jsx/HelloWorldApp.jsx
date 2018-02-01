@@ -1,4 +1,4 @@
 import React from 'react';
-import HelloMessage from './HelloMessage';
+import MainComponent from './MainComponent';
 
-React.render(<HelloMessage name="World" />, document.getElementById('content'));
+React.render(<MainComponent/>, document.getElementById('content'));

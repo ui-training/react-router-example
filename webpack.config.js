@@ -24,7 +24,7 @@ if (production) {
     );
 } else {
     bundle.unshift(
-        'webpack-dev-server/client?http://0.0.0.0:8080',
+        'webpack-dev-server/client?http://0.0.0.0:9000',
         'webpack/hot/only-dev-server'
     );
     plugins.unshift(
@@ -42,7 +42,7 @@ var webpackConfig = {
     output: {
         path: path.join(__dirname, 'app'),
         filename: 'js/[name].js',
-        publicPath: 'http://localhost:8080/'
+        publicPath: 'http://localhost:9000/'
     },
     plugins: plugins,
     resolve: {
@@ -54,7 +54,7 @@ var webpackConfig = {
     module: {
         loaders: [
             {
-                test: /\.(jsx|es6)$/,
+                test: /\.(jsx|es6|js)$/,
                 exclude: /node_modules/,
                 loaders: jsLoaders
             },
